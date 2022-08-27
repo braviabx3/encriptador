@@ -10,8 +10,7 @@ let $encript = document.getElementById("encript"),
 let i = 0;
 let files;
 
-function Encript() {
-  let text = content.value;
+function Encript(text) {
   let textEncript = "";
   const encoder = {
     a: "ai",
@@ -40,8 +39,7 @@ function Encript() {
   return textEncript;
 }
 
-function Decript() {
-  let text = content.value;
+function Decript(text) {
   let textDencript = "";
   const decoder = {
     enter: "e",
@@ -112,14 +110,14 @@ function Upper(opc) {
           ? Message(
               "ERROR: El texto ingresado contiene mayusculas o caracteres especiales"
             )
-          : Encript();
+          : Encript(texto);
         break;
       case "decrypt":
         correct
           ? Message(
               "ERROR: El texto ingresado contiene mayusculas o caracteres especiales"
             )
-          : Decript();
+          : Decript(texto);
         break;
     }
   } else {
