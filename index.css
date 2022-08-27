@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
+
+:root {
+
+  --first-color: rgb(41, 43, 54);
+  --second-color: rgb(90, 247, 141);
+  --br: 8px;
+  --bg: purple;
+  --text-color: #fff;
+  --border-color: #fff;
+  --font: 'Source Code Pro', monospace;
+}
+
+html {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: var(--font);
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  background-image: url(img/w7.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form {
+  border-radius: var(--br);
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 90vh;
+  margin-bottom: 3rem;
+}
+
+.title {
+  background-color: transparent;
+  padding-bottom: 0;
+  max-width: 90%;
+  width: 100%;
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: #fff solid 1px;
+}
+
+.title>h1 {
+  font-weight: bold;
+  font-size: 9vw;
+}
+
+.get__text,
+.controls {
+  background-color: var(--first-color);
+  box-sizing: border-box;
+  min-width: 90%;
+  max-width: 90%;
+  cursor: pointer;
+}
+
+.get__text {
+  margin-top: 0;
+  padding: 1rem;
+  color: var(--second-color);
+  min-height: 30vh;
+  max-height: 30vh;
+  cursor: pointer;
+  border-radius: .5rem;
+  text-align: start;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.get__text::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 15px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: initial;
+  height: 10%;
+}
+
+.controls>button {
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  outline: none;
+  height: 2.5rem;
+  cursor: pointer;
+  background-color: rgb(255, 166, 0)
+}
+
+::placeholder {
+  color: var(--second-color);
+  font-size: 1rem;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 55vh;
+  max-height: 55vh;
+  min-width: 90%;
+  max-width: 90%;
+  overflow-y: scroll;
+}
+
+.output::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+
+.output textarea {
+  background-color: var(--first-color);
+  color: var(--second-color);
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 15vh;
+  max-height: 15vh;
+  padding: 1rem;
+  margin-top: 1rem;
+  overflow-y: visible;
+  box-sizing: border-box;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  text-align: start;
+  font-size: 1rem;
+}
+
+.output textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+
+.output div {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.output button {
+  background-color: var(--bg);
+  background-color: orange;
+  width: 100%;
+  height: 2rem;
+  font-size: .8rem;
+  color: black;
+  cursor: pointer;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+.message {
+  width: 100%;
+  border-radius: var(--br);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.message .message__text {
+  font-size: .8rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+  letter-spacing: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .form {
+    max-width: 80vw;
+    min-height: 60vh;
+    padding: 2rem;
+  }
+
+  .title {
+    margin: 0;
+    min-width: 100%;
+  }
+
+  .title>h1 {
+    font-weight: bold;
+    font-size: 8.5vw;
+  }
+
+  .get__text,
+  .controls {
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .get__text {
+    margin: 2rem 0;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .controls {
+    width: 100%;
+    flex-direction: row;
+    gap: 1.2rem;
+    padding-top: 3rem;
+  }
+
+  .controls>button {
+    color: black;
+    font-size: 1.15rem;
+    font-weight: bold;
+    height: 3rem;
+  }
+
+  ::placeholder {
+    font-size: 1rem;
+  }
+
+  .output {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .output textarea {
+    font-size: 1rem;
+  }
+
+  .output button {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    max-width: 80vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    column-gap: 18vw;
+    margin: 0 auto;
+  }
+
+  .form,
+  .form2 {
+    box-shadow: 5px 5px 10px 5px rgba(90, 247, 141, .75);
+    max-width: 20vw;
+    min-height: 70vh;
+    max-height: 70vh;
+    margin: auto;
+    padding: 1.5rem;
+  }
+
+  .get__text {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .title>h1 {
+    font-size: 2.3vw;
+  }
+
+  .controls {
+    padding-top: 2.5rem;
+    gap: .7rem;
+  }
+
+  .controls>button {
+    font-size: 1rem;
+    font-weight: bold;
+    height: 3rem;
+  }
+
+  .output textarea {
+    font-size: 1.2rem;
+  }
+
+  .output button {
+    height: 2rem;
+  }
+
+}

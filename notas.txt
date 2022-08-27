@@ -1,0 +1,112 @@
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae suscipit minus nostrum quaerat voluptatem
+          illum laudantium praesentium! Labore quas vitae quibusdam soluta unde mollitia harum.</p>
+        <button>✅</button>
+        <p>archivo 1</p>
+        <button>✅</button>
+        <p>archivo 1</p>
+        <button>✅</button>
+        <p>archivo 1</p>
+        <button>✅</button>
+        <p>archivo 1</p>
+        <button>✅</button>
+        <p>archivo 1</p>
+        <button>✅</button>
+
+
+
+
+        var string = "Hello!*/,... folks how are you doing today?";
+var encodedString = btoa(string); // Base64 encode the String
+var decodedString = atob(encodedString);
+console.log(encodedString);
+console.log(decodedString);
+
+let cadena = "a e i o u",
+  cadena2 = "ai enter imes ober ufat";
+function quitarAcentos(cadena) {
+  const code = {
+    a: "ai",
+    e: "enter",
+    i: "imes",
+    o: "ober",
+    u: "ufat",
+  };
+  const nocode = {
+    ai: "a",
+    enter: "e",
+    imes: "i",
+    ober: "o",
+    ufat: "u",
+  };
+
+  return console.log(
+    cadena
+      .split("")
+      .map((letra) => code[letra] || letra)
+      .join("")
+      .toString()
+  );
+}
+
+quitarAcentos(cadena);
+
+
+
+
+function Encript() {
+  let text = content.value;
+  let textEncript = "";
+  /* for (let i = 0; i < text.length; i++) {
+    textEncript += String.fromCharCode(text.charCodeAt(i) + 1);
+  }
+  $output.innerHTML = textEncript; */
+  textEncript = text
+    .split("")
+    .map((letra) => code[letra] || letra)
+    .join("")
+    .toString();
+  console.log(textEncript);
+  return ($output.innerHTML = textEncript);
+}
+
+
+
+function Decript() {
+  let text = content.value;
+  let textDecript = "";
+  for (let i = 0; i < text.length; i++) {
+    textDecript += String.fromCharCode(text.charCodeAt(i) - 1);
+  }
+  $output.innerHTML = textDecript;
+}
+
+
+let coder = {
+  enter: "e",
+  ober: "o",
+  imes: "i",
+  ai: "a",
+  ufat: "u",
+};
+
+let frase = "hoberlai";
+frase = frase.replace(/enter|ober|imes|ai|usat/gim, function (matched) {
+  return coder[matched];
+});
+
+console.log(frase);
+
+var str = "El teclado qWerTy.";
+var mapObj = {
+  q: "1",
+  w: "2",
+  e: "3",
+  r: "4",
+  t: "5",
+  y: "6",
+};
+str = str.replace(/q|w|e|r|t|y/g, function (matched) {
+  return mapObj[matched];
+});
+
+console.log(str);
